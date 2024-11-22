@@ -13,12 +13,12 @@ const denominations = [
 
 let total = 0;
 const counts = Array(denominations.length).fill(0);
-const history = []; // 用于撤销功能的历史记录
+const history = []; 
 
 const container = document.getElementById('buttons-container');
 const result = document.getElementById('result');
 
-// 生成按钮
+
 denominations.forEach((denomination, index) => {
     const wrapper = document.createElement('div');
     wrapper.className = 'btn-wrapper';
@@ -32,7 +32,7 @@ denominations.forEach((denomination, index) => {
     button.onclick = () => {
         counts[index]++;
         total += denomination.value;
-        history.push({ index, value: denomination.value }); // 保存历史操作
+        history.push({ index, value: denomination.value }); 
         updateUI();
     };
 
@@ -46,7 +46,7 @@ denominations.forEach((denomination, index) => {
     container.appendChild(wrapper);
 });
 
-// 更新界面显示
+
 function updateUI() {
     counts.forEach((count, index) => {
         const countText = document.getElementById(`count-${index}`);
@@ -55,7 +55,7 @@ function updateUI() {
     result.textContent = `总金额：${total.toFixed(2)} 元`;
 }
 
-// 复制数据到剪贴板
+
 document.getElementById('copy-data').onclick = () => {
     let text = '';
     counts.forEach((count, index) => {
@@ -69,20 +69,19 @@ document.getElementById('copy-data').onclick = () => {
     });
 };
 
-// 重置数据
+
 document.getElementById('reset-data').onclick = () => {
     if (confirm('确认重置所有数据吗？')) {
         counts.fill(0);
         total = 0;
-        history.length = 0; // 清空历史记录
+        history.length = 0; 
         updateUI();
     }
 };
 
-// 撤销上一步操作
 document.getElementById('undo-last').onclick = () => {
     if (history.length > 0) {
-        const lastAction = history.pop(); // 删除最后一个操作
+        const lastAction = history.pop();
         counts[lastAction.index]--;
         total -= lastAction.value;
         updateUI();
