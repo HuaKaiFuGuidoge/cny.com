@@ -1,14 +1,14 @@
 const denominations = [
-    { value: 0.1, img: './img/01-yb.png', label: '硬币' },
-    { value: 0.5, img: './img/05-yb.png', label: '硬币' },
-    { value: 1, img: './img/1-yb.png', label: '硬币' },
-    { value: 0.5, img: './img/05-zb.png', label: '纸币' },
-    { value: 1, img: './img/1-zb.png', label: '纸币' },
-    { value: 5, img: './img/5-zb.png', label: '纸币' },
-    { value: 10, img: './img/10-zb.png', label: '纸币' },
-    { value: 20, img: './img/20-zb.png', label: '纸币' },
-    { value: 50, img: './img/50-zb.png', label: '纸币' },
-    { value: 100, img: './img/100-zb.png', label: '纸币' }
+    { value: 0.1, img: './img/01-yb.webp', label: '硬币' },
+    { value: 0.5, img: './img/05-yb.webp', label: '硬币' },
+    { value: 1, img: './img/1-yb.webp', label: '硬币' },
+    { value: 0.5, img: './img/05-zb.webp', label: '纸币' },
+    { value: 1, img: './img/1-zb.webp', label: '纸币' },
+    { value: 5, img: './img/5-zb.webp', label: '纸币' },
+    { value: 10, img: './img/10-zb.webp', label: '纸币' },
+    { value: 20, img: './img/20-zb.webp', label: '纸币' },
+    { value: 50, img: './img/50-zb.webp', label: '纸币' },
+    { value: 100, img: './img/100-zb.webp', label: '纸币' }
 ];
 
 let total = 0;
